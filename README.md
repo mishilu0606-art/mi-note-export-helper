@@ -24,8 +24,8 @@ powershell -ExecutionPolicy Bypass -File .\auto-resume.ps1
 
 ```bash
 # 3. 整理成 Obsidian vault：先体检出报告，确认后再落盘
-python scripts/organize.py <导出目录>
-python scripts/organize.py <导出目录> --out <vault> --apply
+python organize.py <导出目录>
+python organize.py <导出目录> --out <vault> --apply
 ```
 
 跑完在 `<vault>/_reports/report.md` 看处置报告，用 Obsidian「打开文件夹作为仓库」打开 `<vault>` 即可。
