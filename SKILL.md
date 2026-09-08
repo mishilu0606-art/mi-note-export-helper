@@ -109,7 +109,7 @@ powershell -ExecutionPolicy Bypass -File .\auto-resume.ps1
 
 只有当**持久化身份本身也失效**时（清过缓存、换了浏览器、隔很久没跑），浏览器窗口才会停住等人。这时去点一下即可，脚本会一直等着，点完继续跑。
 
-**保活提醒（备选）**：用户明确需要定时提醒、或不方便跑脚本时，提供 `scripts/keepalive.ps1`，每 25 分钟蜂鸣 + 弹窗一次。现在它是备选，不再是首选。
+**保活提醒（备选）**：用户明确需要定时提醒、或不方便跑脚本时，提供 `keepalive.ps1`，每 25 分钟蜂鸣 + 弹窗一次。现在它是备选，不再是首选。
 
 ---
 
@@ -174,11 +174,11 @@ npx playwright install chromium   # 若提示浏览器缺失
 
 ## 第四部分：整理（阶段二）
 
-导出完整后才做这一步。脚本：`scripts/organize.py`
+导出完整后才做这一步。脚本：`organize.py`
 
 ```bash
-python scripts/organize.py <导出目录>                          # 只出报告，不动文件
-python scripts/organize.py <导出目录> --out <vault> --apply    # 确认后真正整理
+python organize.py <导出目录>                          # 只出报告，不动文件
+python organize.py <导出目录> --out <vault> --apply    # 确认后真正整理
 ```
 
 ### 执行原则
